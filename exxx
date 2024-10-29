@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade; // Corrigido de 'idae' para 'idade'
+    float altura;
+    
+    cout << "Digite sua idade: ";
+    cin >> idade; // Corrigido de 'idade' para 'idade'
+    
+    cout << "Digite sua altura em metros: ";
+    cin >> altura;
+    
+    cout << "Voce tem " << idade << " anos e " // Corrigido 'idae' para 'idade'
+         << altura << " metros de altura" << endl;
+
+    int alturaInt = static_cast<int>(altura * 100); // Corrigido 'ind' para 'int'
+    cout << "Sua altura em centimetros é: " << alturaInt << " cm" << endl; // Corrigido 'endi' para 'endl'
+    
+    return 0; // Corrigido 'retrum' para 'return'
+}
