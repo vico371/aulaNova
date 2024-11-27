@@ -2,20 +2,37 @@
 using namespace std;
 
 int main() {
-    int idade; // Corrigido de 'idae' para 'idade'
-    float altura;
-    
-    cout << "Digite sua idade: ";
-    cin >> idade; // Corrigido de 'idade' para 'idade'
-    
-    cout << "Digite sua altura em metros: ";
-    cin >> altura;
-    
-    cout << "Voce tem " << idade << " anos e " // Corrigido 'idae' para 'idade'
-         << altura << " metros de altura" << endl;
+    bool stop = true;
+    while (stop) {
+        double num1, num2;
+        char operacao;
 
-    int alturaInt = static_cast<int>(altura * 100); // Corrigido 'ind' para 'int'
-    cout << "Sua altura em centimetros é: " << alturaInt << " cm" << endl; // Corrigido 'endi' para 'endl'
-    
-    return 0; // Corrigido 'retrum' para 'return'
+        cout << "Digite o primeiro numero: ";
+        cin >> num1;
+        cout << "Digite o segundo numero: ";
+        cin >> num2;
+
+        cout << "Escolha a operacao (d para dividir): ";
+        cin >> operacao;
+
+        switch (operacao) {
+            case 'd':
+                if (num2 != 0) {
+                    cout << "Resultados: " << num1 / num2 << endl;
+                } else {
+                    cout << "Erro: Divisao por zero!" << endl;
+                }
+                break;
+            default:
+                cout << "Operacao invalida." << endl;
+                break;
+        }
+        int a;
+        cout << "Deseja parar o programa? (1 - sim / 2 - nao): ";
+        cin >> a; 
+        if (a == 1) {
+            stop = false;
+        }
+    }
+    return 0;
 }

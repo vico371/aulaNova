@@ -1,0 +1,44 @@
+class Pilha:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+        print(f"Item {item} adicionado à pilha.")
+    
+    def pop(self):
+        if self.is_empty():
+            print("A pilha está vazia. Não há nada para remover.")
+            return None
+        removed_item = self.items.pop()
+        print(f"Item {removed_item} removido da pilha.")
+        return removed_item
+    
+    def peek(self):
+        if self.is_empty():
+            print("A pilha está vazia. Não há nada no topo.")
+            return None
+        return self.items[-1]
+    
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+    def display(self):
+        print("Pilha atual:", self.items)
+
+# Uso da Pilha
+pilha = Pilha()
+pilha.push(10)
+pilha.push(20)
+pilha.push(30)
+pilha.display()            # Mostra a pilha atual
+print("Item no topo:", pilha.peek())
+print("Tamanho da pilha:", pilha.size())
+pilha.pop()
+pilha.display()
+print("Tamanho da pilha após remoção:", pilha.size())
+
+push () 
